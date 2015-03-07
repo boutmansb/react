@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="http://fb.me/react-0.12.2.js"></script>
+<script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
+
+<script type="text/jsx">
+    var TextInput = React.createClass({
+        propTypes: {
+          value: React.PropTypes.string,
+          onChange: React.PropTypes.func
+        },
+        render: function(){
+            return <input type="text" value={this.props.value} onChange={this.props.onChange} />
+        }
+    });
+
+    var Me = React.createClass({
+        getDefaultProps:function(){
+          return {
+              name: 'benjamin'
+          }
+        },
+        propTypes: {
+            name: React.PropTypes.string
+        },
+        render: function(){
+            var name = this.props.name;
+            return <span>{name}</span>
+        }
+    });
+
+    var App = React.createClass({
+        getInitialState:function() {
+          return {
+              name: 'Benjamin'
+          }
+        },
+        updateName: function(e){
+            this.setState({name: e.target.value})
+        },
+       render: function(){
+           return (
+                           <div>
+                               <TextInput value={this.state.name} onChange={this.updateName} />
+                               <h1>Hello <Me name={this.state.name} /></h1>
+                           </div>
+                   )
+       }
+    });
+
+    React.render(<App />, document.body);
+</script>
+</body>
+</html>
