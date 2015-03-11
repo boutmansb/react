@@ -18,37 +18,19 @@
     position: relative;
 }
 
-.col-0 {left: 0%;}
-.col-1 {left: 12.5%;}
-.col-2 {left: 25%;}
-.col-3 {left: 37.5%;}
-.col-4 {left: 50%;}
-.col-5 {left: 62.5%;}
-.col-6 {left: 75%;}
-.col-7 {left: 87.5%;}
-.col-8 {left: 100%;}
-
-.row-0,
-.row-1,
-.row-2,
-.row-3,
-.row-4,
-.row-5,
-.row-6,
-.row-7,
-.row-8 {
+[class*="row-"] {
 	width: 11.25%;
 }
 
-.row-0 {padding-top: 0%; z-index: 10;}
-.row-1 {padding-top: 12.5%;z-index: 9;}
-.row-2 {padding-top: 25%;z-index: 8;}
-.row-3 {padding-top: 37.5%;z-index: 7;}
-.row-4 {padding-top: 50%;z-index: 6;}
-.row-5 {padding-top: 62.5%;z-index: 5;}
-.row-6 {padding-top: 75%;z-index: 4;}
-.row-7 {padding-top: 87.5%;z-index: 3;}
-.row-8 {padding-top: 100%;z-index: 2;}
+@for $i from 0 through 8 {
+	.row-#{$i} {
+		padding-top: 12.5% * $i;
+	}
+	.col-#{$i} {
+		left: 12.5% * $i;
+		z-index: 10 - $i;
+	}
+}
 
 .size-2x2 {
     width: 23.75%;
@@ -61,44 +43,3 @@
     padding: 5%;
     cursor: pointer;
 }
-
-/*
-        .square {
-            position: absolute;
-            margin:0.625%;
-            background-color: none;
-            overflow:hidden;
-        }
-
-        .productList {
-            position: relative;
-        }
-
-        .square > div
-        {
-            position: absolute;
-            background-color: red;
-            border-radius: 5px;
-            width: 100%;
-            padding-bottom: 100%;
-            bottom: 0px;
-        }
-
-        .col-0 {
-            left: 0%;
-        }
-        .col-1 {left: 12.5%;}.col-2 {left: 25%;}.col-3 {left: 37.5%;}.col-4 {left: 50%;}.col-5 {left: 62.5%;}.col-6 {left: 75%;}.col-7 {left: 87.5%;}.col-8 {left: 100%;}
-        .row-0 {width: 11.25%;padding-top: 0%; z-index: 10;}.row-1 {width: 11.25%;padding-top: 12.5%;z-index: 9;}.row-2 {width: 11.25%;padding-top: 25%;z-index: 8;}.row-3 {width: 11.25%;padding-top: 37.5%;}.row-4 {width: 11.25%;padding-top: 50%;}.row-5 {width: 11.25%;padding-top: 62.5%;}.row-6 {width: 11.25%;padding-top: 75%;}.row-7 {width: 11.25%;padding-top: 87.5%;}.row-8 {width: 11.25%;padding-top: 100%;}
-
-        .size-2x2 {
-            width: 23.75%;
-        }
-
-        .buttonContent {
-            width: 90%;
-            height: 90%;
-            position: absolute;
-            padding: 5%;
-            cursor: pointer;
-        }
-*/
