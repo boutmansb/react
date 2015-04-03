@@ -1,4 +1,6 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
+var Product = require('./Product');
 var Products = React.createClass({
 
     render: function() {
@@ -12,3 +14,5 @@ var Products = React.createClass({
         );
     }
 });
+
+module.exports = Products;

@@ -1,4 +1,5 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
 var BillDetail = React.createClass({
     render: function() {
         var rows = this.props.bill.map(function(billItem){
@@ -19,3 +20,5 @@ var BillDetail = React.createClass({
         );
     }
 });
+
+module.exports = BillDetail;

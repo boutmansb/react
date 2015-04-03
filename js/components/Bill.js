@@ -1,4 +1,7 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
+var BillDetail = require('./BillDetail');
+
 var Bill = React.createClass({
     render: function() {
         var total = this.props.bill.reduce(function(accumulator, currentBillItem){
@@ -12,3 +15,5 @@ var Bill = React.createClass({
         );
     }
 });
+
+module.exports = Bill;

@@ -1,4 +1,5 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
 var Product = React.createClass({
     buildClassNames: function() {
         return 'square row-' +
@@ -26,3 +27,5 @@ var Product = React.createClass({
         );
     }
 });
+
+module.exports = Product;

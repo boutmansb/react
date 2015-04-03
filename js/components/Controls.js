@@ -1,4 +1,6 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
+var Products = require('./Products');
 var Controls = React.createClass({
     render: function() {
         return (
@@ -17,3 +19,5 @@ var Controls = React.createClass({
         );
     }
 });
+
+module.exports = Controls;

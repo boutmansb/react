@@ -2,10 +2,30 @@
   "name": "CashRegister",
   "version": "0.0.1",
   "description": "test flux/react.",
-  "main": "js/main.js",
+  "main": "main.js",
   "dependencies": {
     "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0",
     "react": "^0.12.2"
   },
-  "author": "Benjamin"
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "jest-cli": "~0.1.17",
+    "reactify": "^0.15.2",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  },
+  "scripts": {
+    "start": "watchify -o js/main.js -v -d .",
+    "build": "browserify -o main.js js/main.js"
+  },
+  "author": "Benjamin",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
 }

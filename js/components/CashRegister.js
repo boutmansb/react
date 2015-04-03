@@ -1,4 +1,8 @@
 /*** @jsx React.DOM ***/
+var React = require('react');
+var Bill = require('./Bill');
+var Controls = require('./Controls');
+
 var CashRegister = React.createClass({
     getInitialState: function(){
         return {
@@ -51,3 +55,5 @@ var CashRegister = React.createClass({
         );
     }
 });
+
+module.exports = CashRegister;
