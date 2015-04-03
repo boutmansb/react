@@ -25,10 +25,10 @@
 @for $i from 0 through 8 {
 	.row-#{$i} {
 		padding-top: 12.5% * $i;
+        z-index: 10 - $i;
 	}
 	.col-#{$i} {
 		left: 12.5% * $i;
-		z-index: 10 - $i;
 	}
 }
 
