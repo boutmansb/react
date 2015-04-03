@@ -1,0 +1,11 @@
+{
+  "name": "CashRegister",
+  "version": "0.0.1",
+  "description": "test flux/react.",
+  "main": "js/main.js",
+  "dependencies": {
+    "flux": "^2.0.1",
+    "react": "^0.12.2"
+  },
+  "author": "Benjamin"
+}
