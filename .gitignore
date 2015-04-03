@@ -1,4 +1,4 @@
 config.codekit
 sass/.sass-chache
 node_modules
-main.js
+/main.js
