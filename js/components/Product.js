@@ -1,5 +1,7 @@
 /*** @jsx React.DOM ***/
 var React = require('react');
+var ProductActions = require('../actions/ProductActions');
+
 var Product = React.createClass({
     buildClassNames: function() {
         return 'square row-' +
@@ -8,8 +10,8 @@ var Product = React.createClass({
             this.props.config.width + 'x' +
             this.props.config.height;
     },
-    handleClick: function(){
-        this.props.onProductClick(this.props.config);
+    handleClick: function(e){
+        ProductActions.handleProductClicked(jQuery(e.target).data('productid'));
     },
     render: function() {
         var style = {
@@ -18,7 +20,7 @@ var Product = React.createClass({
         return (
             <div className={this.buildClassNames()}>
                 <div style={style}>
-                    <div className="buttonContent" onClick={this.handleClick}>
+                    <div className="buttonContent" data-productid={this.props.config.productId} onClick={this.handleClick}>
                         {this.props.config.label}<br />
                         € {this.props.config.price}
                     </div>

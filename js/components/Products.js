@@ -7,7 +7,7 @@ var Products = React.createClass({
         var productClickHandler = this.props.onProductClick;
 
         var products = this.props.buttons.map(function(button){
-            return <Product key={button.productId} config={button} onProductClick={productClickHandler} />
+            return <Product key={button.productId} config={button} />
         });
         return (
             <div className="productList">{products}</div>

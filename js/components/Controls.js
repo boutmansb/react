@@ -12,7 +12,7 @@ var Controls = React.createClass({
                 </ul>
                 <div id="my-tab-content" className="tab-content">
                     <div className="tab-pane active" id="products">
-                        <Products buttons={this.props.buttons} onProductClick={this.props.onProductClick} />
+                        <Products buttons={this.props.buttons} />
                     </div>
                 </div>
             </div>
