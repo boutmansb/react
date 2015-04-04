@@ -1,4 +1,5 @@
 config.codekit
-sass/.sass-chache
+sass/.sass-chache/
 node_modules
 /main.js
+.idea/
