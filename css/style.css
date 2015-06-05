@@ -1,3 +1,33 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  background: url("../images/wallpaper.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+.holder {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.container {
+  background-color: white;
+  width: 100%;
+  max-width: 860px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15% 0 0 -25%; }
+
 .square {
   position: absolute;
   margin: 0.625%;
