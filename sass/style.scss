@@ -150,6 +150,7 @@ section.terminal {
     margin-top: 50px;
     background-color: #FFFFFF;
     height: percentage(500px / 600px);
+    position: relative;
   }
 }
 
@@ -158,47 +159,43 @@ section.terminal {
 // Product buttons
 // -----------------------------------
 .square {
+  position: absolute;
+  margin:1.625%;
+  margin-top: 0;
+  background-color: none;
+  overflow:hidden;
+
+  > div {
     position: absolute;
-    margin:0.625%;
-    background-color: none;
-    overflow:hidden;
-
-    > div {
-	    position: absolute;
-	    background-color: red;
-	    border-radius: 5px;
-	    width: 100%;
-	    padding-bottom: 100%;
-	    bottom: 0px;
-    }
-}
-
-.productList {
-    position: relative;
+    background-color: red;
+    width: 100%;
+    padding-bottom: 100%;
+    bottom: 0;
+  }
 }
 
 [class*="row-"] {
-	width: 11.25%;
+  width: percentage(79px / 550px);
 }
 
-@for $i from 0 through 8 {
-	.row-#{$i} {
-		padding-top: 12.5% * $i;
-        z-index: 10 - $i;
-	}
-	.col-#{$i} {
-		left: 12.5% * $i;
-	}
+@for $i from 0 through 6 {
+  .row-#{$i} {
+    padding-top: percentage(80px / 500px) * $i;
+    z-index: 10 - $i;
+  }
+  .col-#{$i} {
+      left: 16% * $i;
+  }
 }
 
 .size-2x2 {
-    width: 23.75%;
+  width: percentage(152px / 500px);
 }
 
 .buttonContent {
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    padding: 5%;
-    cursor: pointer;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  padding: 5%;
+  cursor: pointer;
 }
