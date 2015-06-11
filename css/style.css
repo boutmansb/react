@@ -95,7 +95,7 @@ section.bill {
       color: #FFFFFF; }
 
 section.terminal {
-  width: 65%;
+  width: 63.83721%;
   height: 100%;
   position: inherit;
   padding-left: 10px;
@@ -180,3 +180,13 @@ section.terminal {
   position: absolute;
   padding: 5%;
   cursor: pointer; }
+  .buttonContent p {
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF; }
+  .buttonContent .title {
+    text-transform: capitalize; }
+  .buttonContent .price {
+    position: absolute;
+    bottom: 0;
+    width: 90%; }

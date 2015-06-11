@@ -140,7 +140,7 @@ section.bill {
 // Terminal section
 // -----------------------------------
 section.terminal {
-  width: 65%;
+  width: percentage(549px / 860px);
   height: 100%;
   position: inherit;
   padding-left: 10px;
@@ -198,4 +198,19 @@ section.terminal {
   position: absolute;
   padding: 5%;
   cursor: pointer;
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+
+  .title {
+    text-transform: capitalize;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
 }
