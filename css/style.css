@@ -1,6 +1,10 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'source_sans_proextralight'; }
+
+.red {
+  background-color: #e7553a !important; }
 
 html {
   background: url("../images/wallpaper.jpg") no-repeat center center fixed;
@@ -19,14 +23,74 @@ body {
   height: 100%; }
 
 .container {
-  background-color: white;
   width: 100%;
   max-width: 860px;
-  height: 600px;
+  max-height: 600px;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -15% 0 0 -25%; }
+
+i {
+  font-size: 21px !important;
+  margin-left: 1px;
+  color: #6f6f6f; }
+
+.button {
+  height: 20px;
+  width: 100px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #FFFFFF; }
+  .button p {
+    text-transform: uppercase;
+    float: right;
+    font-size: 18px;
+    color: #6f6f6f; }
+  .button.last {
+    margin-right: 0; }
+
+section.bill {
+  width: 35%;
+  height: 100%;
+  position: inherit; }
+  section.bill .power {
+    position: absolute;
+    top: 0;
+    background-color: #cb0909;
+    width: 20px;
+    float: left; }
+    section.bill .power i {
+      color: #FFFFFF; }
+  section.bill .history {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right; }
+  section.bill .list {
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    height: 83.33333%; }
+  section.bill .clear {
+    width: 41.66667%;
+    float: left;
+    margin-top: 10px;
+    background-color: #ababab; }
+    section.bill .clear p {
+      color: #FFFFFF;
+      float: none;
+      text-align: center; }
+  section.bill .checkout {
+    width: 41.66667%;
+    margin-top: 10px;
+    float: right;
+    background-color: #0daa36; }
+    section.bill .checkout i, section.bill .checkout p {
+      color: #FFFFFF; }
+
+section.terminal {
+  width: 65%; }
 
 .square {
   position: absolute;

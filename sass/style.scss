@@ -8,8 +8,16 @@ $green: #0daa36;
 * {
   margin: 0;
   padding: 0;
+  font-family: 'source_sans_proextralight';
 }
 
+.red {
+  background-color: $red !important;
+}
+
+// -----------------------------------
+// General Layout
+// -----------------------------------
 html {
   background: url("../images/wallpaper.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -19,7 +27,7 @@ html {
   height: 100%;
 }
 
-body{
+body {
   height: 100%;
 }
 
@@ -30,22 +38,113 @@ body{
 }
 
 .container {
-  background-color: white;
   width: 100%;
   max-width: 860px;
-  height: 600px;
+  max-height: 600px;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -15% 0 0 -25%;
 }
 
+i {
+  font-size: 21px !important;
+  margin-left: 1px;
+  color: $grey;
+}
+
+.button {
+  height: 20px;
+  width: 100px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+
+  p {
+    text-transform: uppercase;
+    float: right;
+    font-size: 18px;
+    color: $grey;
+  }
+
+  &.last {
+    margin-right: 0;
+  }
+}
+
+// -----------------------------------
+// Bill section
+// -----------------------------------
+section.bill {
+  width: 35%;
+  height: 100%;
+  position: inherit;
+
+  .power {
+    position: absolute;
+    top: 0;
+    background-color: #cb0909;
+    width: 20px;
+    float: left;
+    i {
+      color: #FFFFFF;
+    }
+  }
+
+  .history {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+  }
+
+  .list {
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    height: percentage(500px / 600px);
+  }
+
+  .clear {
+    width: percentage(125px / 300px);
+    float: left;
+    margin-top: 10px;
+    background-color: $lightgrey;
+    p {
+      color: #FFFFFF;
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .checkout {
+    width: percentage(125px / 300px);
+    margin-top: 10px;
+    float: right;
+    background-color: $green;
+    i, p {
+      color: #FFFFFF;
+    }
+  }
+}
+
+// -----------------------------------
+// Terminal section
+// -----------------------------------
+section.terminal {
+  width: 65%;
+}
+
+
+// -----------------------------------
+// Product buttons
+// -----------------------------------
 .square {
     position: absolute;
     margin:0.625%;
     background-color: none;
     overflow:hidden;
-    
+
     > div {
 	    position: absolute;
 	    background-color: red;
