@@ -6,6 +6,9 @@
 .red {
   background-color: #e7553a !important; }
 
+.active * {
+  color: #ed4d47 !important; }
+
 html {
   background: url("../images/wallpaper.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -50,6 +53,8 @@ i {
     color: #6f6f6f; }
   .button.last {
     margin-right: 0; }
+  .button.tab {
+    float: left; }
 
 section.bill {
   width: 35%;
@@ -58,7 +63,7 @@ section.bill {
   section.bill .power {
     position: absolute;
     top: 0;
-    background-color: #cb0909;
+    background-color: #ed4d47;
     width: 20px;
     float: left; }
     section.bill .power i {
@@ -90,7 +95,15 @@ section.bill {
       color: #FFFFFF; }
 
 section.terminal {
-  width: 65%; }
+  width: 65%;
+  height: 100%;
+  position: inherit;
+  padding-left: 10px;
+  margin-left: 35%; }
+  section.terminal .main {
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    height: 83.33333%; }
 
 .square {
   position: absolute;
