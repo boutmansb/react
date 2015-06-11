@@ -56,6 +56,11 @@ i {
   .button.tab {
     float: left; }
 
+h1 {
+  font-family: 'source_sans_probold';
+  font-size: 30px;
+  color: #6f6f6f; }
+
 section.bill {
   width: 35%;
   height: 100%;
@@ -93,6 +98,51 @@ section.bill {
     background-color: #0daa36; }
     section.bill .checkout i, section.bill .checkout p {
       color: #FFFFFF; }
+
+.billTop {
+  position: relative;
+  margin: 0 10px 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #6f6f6f; }
+  .billTop h1 {
+    padding-top: 15px;
+    text-transform: uppercase;
+    line-height: 15px; }
+  .billTop .customer {
+    color: #ed4d47;
+    font-size: 12px; }
+  .billTop .addCustomer {
+    background-color: #ed4d47;
+    width: 20px;
+    padding-top: 1px;
+    padding-left: 1px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 10px; }
+    .billTop .addCustomer i {
+      color: #FFFFFF; }
+
+.ticketLines {
+  height: 76.4%; }
+  .ticketLines .lines {
+    padding: 0 10px;
+    width: 100%; }
+    .ticketLines .lines td.price {
+      text-align: right;
+      color: #ed4d47; }
+
+.endTotal {
+  margin: 10px 10px 0;
+  border-top: 1px solid #6f6f6f; }
+  .endTotal h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: lighter; }
+    .endTotal h2 span {
+      font-family: 'source_sans_proregular';
+      color: #ed4d47;
+      float: right; }
 
 section.terminal {
   width: 63.83721%;
@@ -188,5 +238,5 @@ section.terminal {
     text-transform: capitalize; }
   .buttonContent .price {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     width: 90%; }
