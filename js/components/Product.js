@@ -19,7 +19,7 @@ var Product = React.createClass({
         };
         return (
             <div className={this.buildClassNames()}>
-                <div style={style}>
+                <div className={style}>
                     <div className="buttonContent" data-productid={this.props.config.productId} onClick={this.handleClick}>
                         {this.props.config.label}<br />
                         € {this.props.config.price}

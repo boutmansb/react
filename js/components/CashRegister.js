@@ -16,9 +16,11 @@ var CashRegister = React.createClass({
     },
     render: function() {
         return (
-            <div className="row">
-                <div className="col-md-6"><Bill bill={this.state.Bill} /></div>
-                <div className="col-md-6"><Controls buttons={this.state.Buttons} /></div>
+            <div className="holder">
+                <div className="container">
+                    <Bill bill={this.state.Bill} />
+                    <Controls buttons={this.state.Buttons} />
+                </div>
             </div>
         );
     }

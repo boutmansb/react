@@ -10,7 +10,7 @@ var Products = React.createClass({
             return <Product key={button.productId} config={button} />
         });
         return (
-            <div className="productList">{products}</div>
+            <div className="main">{products}</div>
         );
     }
 });

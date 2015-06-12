@@ -4,18 +4,12 @@ var Products = require('./Products');
 var Controls = React.createClass({
     render: function() {
         return (
-            <div>
-                <ul className="nav nav-tabs">
-                    <li role="presentation" className="active"><a href="products">Products</a></li>
-                    <li role="presentation"><a href="#">Clients</a></li>
-                    <li role="presentation"><a href="#">History</a></li>
-                </ul>
-                <div id="my-tab-content" className="tab-content">
-                    <div className="tab-pane active" id="products">
-                        <Products buttons={this.props.buttons} />
-                    </div>
-                </div>
-            </div>
+            <section className="terminal">
+                <div className="button tab active"><i className="fa fa-ticket"></i><p>Tickets</p></div>
+                <div className="button tab last"><i className="fa fa-life-ring"></i><p>Stuff</p></div>
+
+                <Products buttons={this.props.buttons} />
+            </section>
         );
     }
 });
