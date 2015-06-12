@@ -3,3 +3,4 @@ sass/.sass-chache/
 node_modules
 /main.js
 .idea/*
+npm-debug.log
