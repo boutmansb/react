@@ -13,6 +13,12 @@ var CashRegisterDispatcher = assign(new Dispatcher(), {
             source: 'USER_INPUT',
             action: action
         })
+    },
+    handleProductsLoaded: function(action){
+        this.dispatch({
+            source: 'USER_INPUT',
+            action: action
+        })
     }
 });
 

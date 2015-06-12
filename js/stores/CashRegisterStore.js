@@ -1,53 +1,19 @@
 var EventEmitter = require('events').EventEmitter;
 var CashRegisterDispatcher = require('../dispatcher/CashRegisterDispatcher');
 var CashRegisterConstants = require('../constants/CashRegisterConstants');
+var ServerActions = require('../actions/ServerActions');
 var assign = require('object-assign');
 
 var CashRegister = {
     Bill: [],
-    Buttons: [
-        {
-            productId: 1,
-            label: 'schoen',
-            price: 10,
-            color: 'red',
-            height: 1,
-            width: 1,
-            col: 0,
-            row: 1
-        },
-        {
-            productId: 2,
-            label: 'sok',
-            price: 10,
-            color: 'darkred',
-            height: 1,
-            width: 1,
-            col: 1,
-            row: 1
-        },
-        {
-            productId: 3,
-            label: 'broek',
-            price: 10,
-            color: 'orange',
-            height: 1,
-            width: 1,
-            col: 0,
-            row: 2
-        },
-        {
-            productId: 4,
-            label: 'schel kaas',
-            price: 10,
-            color: 'red',
-            height: 2,
-            width: 2,
-            col: 3,
-            row: 2
-        }
-    ]
+    Products: []
 };
+
+function loadProducts(cashRegister)
+{
+    CashRegister.Bill = cashRegister.Bill;
+    CashRegister.Products = cashRegister.Products;
+}
 
 function findByProductId(collection, productId)
 {
@@ -68,7 +34,7 @@ function addProductToBill(productId) {
     }
     else
     {
-        var product = findByProductId(CashRegister.Buttons, productId);
+        var product = findByProductId(CashRegister.Products, productId);
 
         billItem = {
             productId: product.productId,
@@ -105,9 +71,21 @@ var CashRegisterStore = assign({}, EventEmitter.prototype, {
             case CashRegisterConstants.CLEAR_CLICKED:
                 clearBill();
                 break;
+            case CashRegisterConstants.PRODUCTS_LOADED:
+                loadProducts(action.cashRegister);
+                break;
         }
         CashRegisterStore.emitChange();
     })
+});
+
+jQuery(document).ready(function(){
+    $.ajax({
+        url: 'urlToAdminApp',
+        success: function(cashRegister) {
+            ServerActions.productsLoaded(cashRegister);
+        }
+    });
 });
 
 module.exports = CashRegisterStore;

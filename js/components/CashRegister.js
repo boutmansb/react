@@ -19,7 +19,7 @@ var CashRegister = React.createClass({
             <div className="holder">
                 <div className="container">
                     <Bill bill={this.state.Bill} />
-                    <Controls buttons={this.state.Buttons} />
+                    <Controls buttons={this.state.Products} />
                 </div>
             </div>
         );
