@@ -24,7 +24,7 @@ var Bill = React.createClass({
                     </div>
 
                     <div className="endTotal">
-                        <h2>TOTAAL <span>{total}</span></h2>
+                        <h2>TOTAAL <span className="totalPrice">{total}</span></h2>
                     </div>
                 </div>
 

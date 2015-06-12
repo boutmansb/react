@@ -15,6 +15,14 @@ $green: #0daa36;
   background-color: $red !important;
 }
 
+.darkred {
+  background-color: $darkred !important;
+}
+
+.orange {
+  background-color: $orange !important;
+}
+
 .active * {
   color: $darkred !important;
 }
@@ -204,7 +212,7 @@ section.bill {
     font-weight: lighter;
 
 
-    span {
+    span.totalPrice {
       font-family: 'source_sans_proregular';
       color: $darkred;
       float: right;

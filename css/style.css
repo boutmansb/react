@@ -6,6 +6,12 @@
 .red {
   background-color: #e7553a !important; }
 
+.darkred {
+  background-color: #ed4d47 !important; }
+
+.orange {
+  background-color: #e76a3b !important; }
+
 .active * {
   color: #ed4d47 !important; }
 
@@ -139,7 +145,7 @@ section.bill {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: lighter; }
-    .endTotal h2 span {
+    .endTotal h2 span.totalPrice {
       font-family: 'source_sans_proregular';
       color: #ed4d47;
       float: right; }

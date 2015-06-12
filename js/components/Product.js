@@ -14,15 +14,12 @@ var Product = React.createClass({
         ProductActions.handleProductClicked(jQuery(e.target).data('productid'));
     },
     render: function() {
-        var style = {
-            backgroundColor: this.props.config.color
-        };
         return (
             <div className={this.buildClassNames()}>
-                <div className={style}>
+                <div className={this.props.config.color}>
                     <div className="buttonContent" data-productid={this.props.config.productId} onClick={this.handleClick}>
-                        {this.props.config.label}<br />
-                        € {this.props.config.price}
+                        <p className="title">{this.props.config.label}</p>
+                        <p className="price">€ {this.props.config.price}</p>
                     </div>
                 </div>
             </div>
