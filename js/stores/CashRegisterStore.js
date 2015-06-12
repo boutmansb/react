@@ -82,6 +82,10 @@ function addProductToBill(productId) {
     CashRegister.Bill = updatedBill;
 }
 
+function clearBill() {
+    CashRegister.Bill = [];
+}
+
 var CashRegisterStore = assign({}, EventEmitter.prototype, {
     getCashRegister: function() {
         return CashRegister;
@@ -97,6 +101,9 @@ var CashRegisterStore = assign({}, EventEmitter.prototype, {
         switch (action.name) {
             case CashRegisterConstants.PRODUCT_CLICKED:
                 addProductToBill(action.productId);
+                break;
+            case CashRegisterConstants.CLEAR_CLICKED:
+                clearBill();
                 break;
         }
         CashRegisterStore.emitChange();

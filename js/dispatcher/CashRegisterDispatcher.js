@@ -7,6 +7,12 @@ var CashRegisterDispatcher = assign(new Dispatcher(), {
             source: 'USER_INPUT',
             action: action
         })
+    },
+    handleClearClicked: function(action){
+        this.dispatch({
+            source: 'USER_INPUT',
+            action: action
+        })
     }
 });
 

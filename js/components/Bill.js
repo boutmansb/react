@@ -1,8 +1,12 @@
 /*** @jsx React.DOM ***/
 var React = require('react');
 var BillDetail = require('./BillDetail');
+var BillActions = require('../actions/BillActions');
 
 var Bill = React.createClass({
+    handleClick: function(){
+        BillActions.handleClearClicked();
+    },
     render: function() {
         var total = this.props.bill.reduce(function(accumulator, currentBillItem){
             return accumulator + currentBillItem.price * currentBillItem.amount;
@@ -28,7 +32,7 @@ var Bill = React.createClass({
                     </div>
                 </div>
 
-                <div className="button clear"><p>Clear</p></div>
+                <div className="button clear" onClick={this.handleClick}><p>Clear</p></div>
                 <div className="button checkout last"><i className="fa fa-eur"></i><p>Afrekenen</p></div>
             </section>
         );
