@@ -8,6 +8,13 @@ var ProductActions = {
             productId: productId
         };
         CashRegisterDispatcher.handleProductClicked(action);
+    },
+    handleTabClicked: function(tab){
+        var action = {
+            name: CashRegisterConstants.TAB_CLICKED,
+            tab: tab
+        };
+        CashRegisterDispatcher.handleTabClicked(action);
     }
 };
 

@@ -19,6 +19,12 @@ var CashRegisterDispatcher = assign(new Dispatcher(), {
             source: 'USER_INPUT',
             action: action
         })
+    },
+    handleTabClicked: function(action){
+        this.dispatch({
+            source: 'USER_INPUT',
+            action: action
+        })
     }
 });
 

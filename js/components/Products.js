@@ -5,8 +5,8 @@ var Products = React.createClass({
 
     render: function() {
         var products = this.props.buttons.map(function(button){
-            return <Product key={button.productId} config={button} />
-        });
+            if(this.props.activeTab == button.tab) return <Product key={button.productId} config={button} />
+        }, this);
         return (
             <div className="main">{products}</div>
         );
