@@ -11,13 +11,13 @@ var Product = React.createClass({
             this.props.config.height;
     },
     handleClick: function(e){
-        ProductActions.handleProductClicked(jQuery(e.target).data('productid'));
+        ProductActions.handleProductClicked(jQuery(e.target).closest('.square').data('productid'));
     },
     render: function() {
         return (
-            <div className={this.buildClassNames()}>
+            <div className={this.buildClassNames()} data-productid={this.props.config.productId}>
                 <div className={this.props.config.color}>
-                    <div className="buttonContent" data-productid={this.props.config.productId} onClick={this.handleClick}>
+                    <div className="buttonContent" onClick={this.handleClick}>
                         <p className="title">{this.props.config.label}</p>
                         <p className="price">€ {this.props.config.price}</p>
                     </div>

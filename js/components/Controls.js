@@ -18,7 +18,7 @@ function getUnique(array) {
 
 var Controls = React.createClass({
     handleTabClick: function(e){
-        ProductActions.handleTabClicked(jQuery(e.target).data('tab'));
+        ProductActions.handleTabClicked(jQuery(e.target).data('tab') == undefined ? jQuery(e.target).closest('.tab').data('tab') : jQuery(e.target).data('tab'));
     },
     render: function() {
         var distinctTabs = this.props.buttons.map(function(button){
